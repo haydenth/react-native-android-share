@@ -1,10 +1,10 @@
 'use strict';
 
-var AndroidActionModule = require('NativeModules').AndroidAction;
+var AndroidShareModule = require('NativeModules').RNAndroidShare;
 var invariant = require('invariant');
 var React = require('react-native');
 
-var AndroidAction = {
+var AndroidShare = {
 
    openChooserWithOptions(options: Object, title: string) {
     invariant(
@@ -16,7 +16,7 @@ var AndroidAction = {
       'Invalid Title: should be a string. Was: ' + title
     );
     console.log('calling android action');
-    AndroidActionModule.openChooserWithOptions(options, title);
+    AndroidShareModule.openChooserWithOptions(options, title);
   },
 
   render() {
@@ -24,4 +24,4 @@ var AndroidAction = {
   }
 
 };
-module.exports = AndroidAction;
+module.exports = AndroidShare;
