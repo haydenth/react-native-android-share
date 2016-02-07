@@ -60,10 +60,46 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
 * Now implement into your code
 
 ```
+var React = require('react-native')
+var {
+  View,
+  Text,
+  TouchableHighlight,
+  Image,
+} = React
+var AndroidShare = require('react-native-android-share');
 
+var ShareButton = React.createClass({
+
+  // this will open the share tray
+  _showShareActionSheet(story) {
+    var object = {subject: 'Story Title', text: 'Message Body'};
+    AndroidShare.openChooserWithOptions(object, 'Share Story');
+  },
+
+  // render a simple button
+  render() {
+    return (
+        <TouchableHighlight
+         underlayColor='rgba(0,0,0,0)'
+         resizeMode='cover'
+         onPress={()=>this._showShareActionSheet(this.props.story)}>
+            <Image source={require("../images/share.png")}
+            width={45}
+            height={45}
+            style={{height:45, width:45}}/>
+          </TouchableHighlight>);
+    },
+});
+
+module.exports = ShareButton;
 
 ```
 
 TODO
 =====================
-* right now, module basically returns an empty view. need to either make this a component OR just a file with classes in it..
+* right now, module basically returns an empty view. need to either make this a component OR just a file with classes in it.
+
+CONTACT
+====================
+thayden@gmail.com with questions or pull requests
