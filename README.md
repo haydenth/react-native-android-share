@@ -1,5 +1,9 @@
 # react-native-android-share
 
+This fires off the default android share tray:
+
+![Example Image](/example.png)
+
 ### Add it to your android project
 
 * In `android/setting.gradle`
