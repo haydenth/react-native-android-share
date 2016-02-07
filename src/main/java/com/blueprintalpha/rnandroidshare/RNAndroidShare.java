@@ -26,7 +26,7 @@ class RNAndroidShare extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-    return "AndroidShare";
+    return "RNAndroidShare";
   }
 
   @ReactMethod
