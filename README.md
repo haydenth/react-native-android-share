@@ -4,6 +4,12 @@ This fires off the default android share tray:
 
 <img src="http://i.imgur.com/avnu4ir.png" width="150">
 
+### Installl
+
+```
+npm i react-native-android-share --save
+```
+
 ### Add it to your android project
 
 * In `android/setting.gradle`
