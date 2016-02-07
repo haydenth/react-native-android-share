@@ -15,7 +15,7 @@ var AndroidShare = {
       typeof title === 'string',
       'Invalid Title: should be a string. Was: ' + title
     );
-    console.log('calling android action');
+    console.log('calling android share chooser');
     RNAndroidShare.openChooserWithOptions(options, title);
   },
 
