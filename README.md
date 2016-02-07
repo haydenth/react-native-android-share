@@ -20,10 +20,10 @@ dependencies {
 }
 ```
 
-* Register Module - RN <= 0.17 (in MainActivity.java)
+* Register Module in your MainActivity.java
 
 ```java
-import com.blueprintalpha.androidshare.RNAndroidSharePackage;  // <--- import
+import com.blueprintalpha.rnandroidshare.RNAndroidSharePackage;  // <--- import
 
 public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
   ......
@@ -52,3 +52,14 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
 
 }
 ```
+
+* Now implement into your code
+
+```
+
+
+```
+
+TODO
+=====================
+* right now, module basically returns an empty view. need to either make this a component OR just a file with classes in it..
