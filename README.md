@@ -2,7 +2,7 @@
 
 This fires off the default android share tray:
 
-![Example Image](http://i.imgur.com/avnu4ir.png)
+![Example Image](http://i.imgur.com/avnu4ir.png =300x)
 
 ### Add it to your android project
 
