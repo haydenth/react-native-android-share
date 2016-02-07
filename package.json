@@ -1,0 +1,22 @@
+{
+   "name": "react-native-android-share",
+   "version": "0.0.1",
+   "description": "Android tray to share things",
+   "main": "index.js",
+   "scripts": {
+     "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "keywords": [
+     "react",
+     "react-native",
+     "react-component",
+     "android"
+   ],
+   "author": "Tom Hayden <thayden@gmail.com>",
+   "license": "MIT",
+   "repository": "https://github.com/haydenth/react-native-android-share",
+   "bugs": "https://github.com/haydenth/react-native-android-share/issues",
+   "peerDependencies": {
+     "react-native": ">=0.13"
+   }
+}
