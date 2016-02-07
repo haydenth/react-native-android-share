@@ -1,6 +1,6 @@
 'use strict';
 
-var AndroidShareModule = require('NativeModules').RNAndroidShare;
+var RNAndroidShare = require('NativeModules').RNAndroidShare;
 var invariant = require('invariant');
 var React = require('react-native');
 
@@ -16,7 +16,7 @@ var AndroidShare = {
       'Invalid Title: should be a string. Was: ' + title
     );
     console.log('calling android action');
-    AndroidShareModule.openChooserWithOptions(options, title);
+    RNAndroidShare.openChooserWithOptions(options, title);
   },
 
   render() {
