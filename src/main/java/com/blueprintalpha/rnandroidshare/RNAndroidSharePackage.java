@@ -1,4 +1,4 @@
-package com.blueprintalpha.androidaction;
+package com.blueprintalpha.rnandroidshare;
 
 import android.app.Activity;
 
@@ -11,18 +11,18 @@ import com.facebook.react.uimanager.ViewManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AndroidActionPackage implements ReactPackage {
+public class RNAndroidSharePackage implements ReactPackage {
 
     private Activity mActivity = null;
 
-    public AndroidActionPackage(Activity activity) {
+    public RNAndroidSharePackage(Activity activity) {
         mActivity = activity;
     }
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new AndroidAction(reactContext).setActivity(mActivity));
+        modules.add(new RNAndroidShare(reactContext).setActivity(mActivity));
         return modules;
     }
 

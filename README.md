@@ -1,4 +1,4 @@
-# react-native-android-action
+# react-native-android-share
 
 ### Add it to your android project
 
@@ -6,8 +6,8 @@
 
 ```gradle
 ...
-include ':AndroidAction', ':app'
-project(':AndroidAction').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-android-action')
+include ':RNAndroidShare', ':app'
+project(':RNAndroidShare').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-android-share')
 ```
 
 * In `android/app/build.gradle`
@@ -16,14 +16,14 @@ project(':AndroidAction').projectDir = new File(rootProject.projectDir, '../node
 ...
 dependencies {
   ...
-  compile project(':AndroidAction')
+  compile project(':RNAndroidShare')
 }
 ```
 
 * Register Module - RN <= 0.17 (in MainActivity.java)
 
 ```java
-import com.blueprintalpha.androidaction.AndroidActionPackage;  // <--- import
+import com.blueprintalpha.androidshare.RNAndroidSharePackage;  // <--- import
 
 public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
   ......
@@ -38,7 +38,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
       .setBundleAssetName("index.android.bundle")
       .setJSMainModuleName("index.android")
       .addPackage(new MainReactPackage())
-      .addPackage(new AndroidActionPackage()) // <------ add this line to yout MainActivity class
+      .addPackage(new RNAndroidSharePackage()) // <------ add this line to your MainActivity class
       .setUseDeveloperSupport(BuildConfig.DEBUG)
       .setInitialLifecycleState(LifecycleState.RESUMED)
       .build();

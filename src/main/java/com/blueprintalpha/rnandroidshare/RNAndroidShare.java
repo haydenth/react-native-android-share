@@ -1,4 +1,4 @@
-package com.blueprintalpha.androidaction;
+package com.blueprintalpha.rnandroidshare;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,22 +11,22 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableType;
 
-class AndroidAction extends ReactContextBaseJavaModule {
+class RNAndroidShare extends ReactContextBaseJavaModule {
 
   Activity mActivity;
 
-  public AndroidAction(ReactApplicationContext reactContext) {
+  public RNAndroidShare(ReactApplicationContext reactContext) {
     super(reactContext);
   }
 
-  public AndroidAction setActivity(Activity activity) {
+  public RNAndroidShare setActivity(Activity activity) {
     mActivity = activity;
     return this;
   }
 
   @Override
   public String getName() {
-    return "AndroidAction";
+    return "AndroidShare";
   }
 
   @ReactMethod
