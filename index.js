@@ -1,8 +1,12 @@
 'use strict';
 
-var RNAndroidShare = require('NativeModules').RNAndroidShare;
 var invariant = require('invariant');
 var React = require('react-native');
+var {
+      NativeModules: {
+             RNAndroidShare
+     }
+} = require('react-native');
 
 var AndroidShare = {
 
