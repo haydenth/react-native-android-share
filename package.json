@@ -24,5 +24,8 @@
   "peerDependencies": {
     "react-native": ">=0.13"
   },
-  "homepage": "https://github.com/haydenth/react-native-android-share#readme"
+  "homepage": "https://github.com/haydenth/react-native-android-share#readme",
+  "dependencies": {
+    "invariant": "^2.2.1"
+  }
 }
