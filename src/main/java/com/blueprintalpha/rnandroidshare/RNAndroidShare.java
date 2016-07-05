@@ -2,6 +2,7 @@ package com.blueprintalpha.rnandroidshare;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.JSApplicationIllegalArgumentException;
@@ -33,13 +34,23 @@ class RNAndroidShare extends ReactContextBaseJavaModule {
   public void openChooserWithOptions(ReadableMap options, String title) {
     
     Intent intent = new Intent(Intent.ACTION_SEND);
-    intent.setTypeAndNormalize("text/plain");
+
     if(options.hasKey("subject")) {
       intent.putExtra(Intent.EXTRA_SUBJECT, options.getString("subject"));
     }
+
     if(options.hasKey("text")) {
       intent.putExtra(Intent.EXTRA_TEXT, options.getString("text"));
     }
+
+    if(options.hasKey("imageUrl")) {
+      Uri uri = Uri.parse(options.getString("imageUrl"));
+      intent.putExtra(Intent.EXTRA_STREAM, uri);
+      intent.setType("image/*");
+    } else {
+      intent.setType("plain/text");
+    }
+    
     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     mActivity.startActivity(Intent.createChooser(intent, title));
   }

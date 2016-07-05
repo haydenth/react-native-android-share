@@ -39,23 +39,11 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
   ......
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    mReactRootView = new ReactRootView(this);
-
-    mReactInstanceManager = ReactInstanceManager.builder()
-      .setApplication(getApplication())
-      .setBundleAssetName("index.android.bundle")
-      .setJSMainModuleName("index.android")
-      .addPackage(new MainReactPackage())
-      .addPackage(new RNAndroidSharePackage()) // <------ add this line to your MainActivity class
-      .setUseDeveloperSupport(BuildConfig.DEBUG)
-      .setInitialLifecycleState(LifecycleState.RESUMED)
-      .build();
-
-    mReactRootView.startReactApplication(mReactInstanceManager, "AndroidRNSample", null);
-
-    setContentView(mReactRootView);
+  protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
+          new MainReactPackage(),
+          new RNAndroidSharePackage(this) // <------ add this line to your MainActivity class
+      );
   }
 
   ......
@@ -65,7 +53,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
 
 * Now implement into your code
 
-```
+```js
 var React = require('react-native')
 var {
   View,
