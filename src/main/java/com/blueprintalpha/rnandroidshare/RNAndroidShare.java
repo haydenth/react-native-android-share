@@ -48,7 +48,7 @@ class RNAndroidShare extends ReactContextBaseJavaModule {
       intent.putExtra(Intent.EXTRA_STREAM, uri);
       intent.setType("image/*");
     } else {
-      intent.setType("plain/text");
+      intent.setType("text/plain");
     }
     
     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
