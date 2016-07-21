@@ -1,7 +1,5 @@
 package com.blueprintalpha.rnandroidshare;
 
-import android.app.Activity;
-
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
@@ -13,16 +11,10 @@ import java.util.List;
 
 public class RNAndroidSharePackage implements ReactPackage {
 
-    private Activity mActivity = null;
-
-    public RNAndroidSharePackage(Activity activity) {
-        mActivity = activity;
-    }
-
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new RNAndroidShare(reactContext).setActivity(mActivity));
+        modules.add(new RNAndroidShare(reactContext));
         return modules;
     }
 
