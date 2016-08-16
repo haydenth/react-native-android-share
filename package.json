@@ -1,6 +1,6 @@
 {
   "name": "react-native-android-share",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Android tray to share things",
   "main": "index.js",
   "scripts": {
